@@ -1,18 +1,21 @@
 {
   "configVersion": 1,
-  "index": "/angular-pwa-sample/index.html",
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/angular-pwa-sample/favicon.ico",
-        "/angular-pwa-sample/index.html",
-        "/angular-pwa-sample/main.0c178c009bd42b639879.js",
-        "/angular-pwa-sample/polyfills.7a0e6866a34e280f48e7.js",
-        "/angular-pwa-sample/runtime.a66f828dca56eeb90e02.js",
-        "/angular-pwa-sample/styles.3b0c2b3c80ec3b002196.css"
+        "/favicon.ico",
+        "/index.html",
+        "/main.0c178c009bd42b639879.js",
+        "/ngsw-worker.js",
+        "/polyfills.7a0e6866a34e280f48e7.js",
+        "/runtime.a66f828dca56eeb90e02.js",
+        "/safety-worker.js",
+        "/styles.3b0c2b3c80ec3b002196.css",
+        "/worker-basic.min.js"
       ],
       "patterns": []
     },
@@ -21,34 +24,37 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/angular-pwa-sample/assets/icons/icon-128x128.png",
-        "/angular-pwa-sample/assets/icons/icon-144x144.png",
-        "/angular-pwa-sample/assets/icons/icon-152x152.png",
-        "/angular-pwa-sample/assets/icons/icon-192x192.png",
-        "/angular-pwa-sample/assets/icons/icon-384x384.png",
-        "/angular-pwa-sample/assets/icons/icon-512x512.png",
-        "/angular-pwa-sample/assets/icons/icon-72x72.png",
-        "/angular-pwa-sample/assets/icons/icon-96x96.png"
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/angular-pwa-sample/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/angular-pwa-sample/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/angular-pwa-sample/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/angular-pwa-sample/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/angular-pwa-sample/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/angular-pwa-sample/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/angular-pwa-sample/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/angular-pwa-sample/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/angular-pwa-sample/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/angular-pwa-sample/index.html": "d6da26641c93b990a30a2976f51e51a65d4cd8b7",
-    "/angular-pwa-sample/main.0c178c009bd42b639879.js": "cd0b1151db055c2c3c7e0e8b36facf07bfd5dc1e",
-    "/angular-pwa-sample/polyfills.7a0e6866a34e280f48e7.js": "9f0b8341c0a0caec1581da2f255eb5dbb8e12303",
-    "/angular-pwa-sample/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/angular-pwa-sample/styles.3b0c2b3c80ec3b002196.css": "7a7a76953393836f05a6f37279616b0bdf16544f"
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "3f397a79e83a8e19970489df7ac0ad144f38b622",
+    "/main.0c178c009bd42b639879.js": "cd0b1151db055c2c3c7e0e8b36facf07bfd5dc1e",
+    "/ngsw-worker.js": "09d1943903239c062615b3e3347692131cc078c7",
+    "/polyfills.7a0e6866a34e280f48e7.js": "9f0b8341c0a0caec1581da2f255eb5dbb8e12303",
+    "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/safety-worker.js": "ae5c8be3955e38edeeec09ed94b63d1e57f003c9",
+    "/styles.3b0c2b3c80ec3b002196.css": "7a7a76953393836f05a6f37279616b0bdf16544f",
+    "/worker-basic.min.js": "ae5c8be3955e38edeeec09ed94b63d1e57f003c9"
   },
   "navigationUrls": [
     {
