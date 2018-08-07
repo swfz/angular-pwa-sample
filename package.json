@@ -7,7 +7,6 @@
     "build": "ng build",
     "ngsw-config": "ngsw-config dist/pwa-sample ngsw-config.json",
     "pwa-start": "ng build --prod && npm run ngsw-config && static -a 192.168.30.17 dist/pwa-sample",
-    "ghp-deploy": "ng build --prod --aot && npm run ngsw-config && cp CNAME dist/pwa-sample/ && ngh --dir dist/pwa-sample",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
